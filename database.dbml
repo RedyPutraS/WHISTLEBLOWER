@@ -1,0 +1,106 @@
+Project whistleblower {
+    database_type: 'MySql'
+}
+
+Table users {
+    id bigint [pk, increment]
+    username varchar [not null]
+    password text [not null]
+    role int [not null]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table roles {
+    id int [pk, increment]
+    name varchar [not null]
+    guard_name varchar [not null]
+    created_at timestamp 
+    updated_at timestamp
+}
+
+Table permissions {
+    id int
+    name varchar [not null]
+    guard_name varchar [not null]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table role_has_permissions {
+    permission_id int [pk, ref: > permissions.id]
+    role_id int [pk, ref: > roles.id]
+}
+
+Table model_has_roles {
+    role_id int [pk, ref: > roles.id]
+    model_type varchar [pk]
+    model_id int [pk]
+}
+
+Table model_has_permissions {
+    permission_id int [pk, ref: > permissions.id]
+    model_type varchar [pk]
+    model_id int [pk]
+}
+
+Table report {
+    id bigint [pk, increment]
+    ticket_number varchar [not null]
+    token varchar [not null]
+    name varchar
+    company varchar
+    phone varchar
+    email varchar
+    report_time timestamp
+    scene varchar
+    status tinyint [not null, default: 1, note: '1 for accept, 2 for reject, 3 for less of evidence, 4 for on process, 5 for proven, 6 for not proven']
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table report_documentation {
+    id bigint [pk, increment]
+    report_id int [ref: > report.id, not null]
+    file text [not null]
+    type varchar [not null, note: 'file type, exp: .jpg, .xlsx, .png']
+    is_additional boolean [default: false]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table report_description {
+    id bigint [pk, increment]
+    report_id int [ref: > report.id, not null]
+    description text [not null]
+    is_additional boolean [default: false]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table report_log {
+    id bigint [pk, increment]
+    report_id int [ref: > report.id, not null]
+    message text [not null]
+    type tinyint [note: '1 is from user, 2 is from investigator']
+    // channel_id int [ref: > channel_message.id]
+    receiver_id int
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table channel_message {
+    id int [pk, increment]
+    name varchar [not null]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table settings {
+    id int [pk, increment]
+    key varchar [not null]
+    value text [not null]
+    created_at timestamp
+    updated_at timestamp
+}
+

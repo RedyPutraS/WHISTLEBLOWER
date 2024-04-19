@@ -1,0 +1,10 @@
+@media only screen and (max-width: 480px) {
+    .border-inline {
+        border-right: none;
+        border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    .text-lg-right {
+        text-align: left;
+    }
+}

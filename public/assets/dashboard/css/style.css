@@ -1,0 +1,110 @@
+.border-inline {
+    border-right: 1px solid rgb(238, 238, 238);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-select {
+    font-size: 15px;
+}
+
+.text-lg-right {
+    text-align: right;
+}
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn.btn-icon.btn-sm,
+.btn-group-sm > .btn.btn-icon {
+    height: calc(1.35em + 1.1rem + 2px);
+    width: calc(1.35em + 1.1rem + 2px);
+}
+
+.btn.btn-bg-light {
+    background-color: #e8f3ff;
+    border-color: #e8f3ff;
+}
+
+.btn.btn-icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    height: calc(1.5em + 1.3rem + 2px);
+    width: calc(1.5em + 1.3rem + 2px);
+}
+
+.btn.btn-icon-success i {
+    color: #25476a;
+    font-size: 15px;
+}
+
+.btn.btn-icon-success:hover,
+.btn.btn-icon-success:focus {
+    color: #ffffff !important;
+    background-color: #25476a !important;
+    border-color: #25476a !important;
+}
+
+.btn.btn-icon-success:hover i {
+    color: #ffffff;
+}
+
+.table-bordered,
+.table-bordered > thead {
+    border-color: #25476a !important;
+}
+
+.table-bordered > :not(caption) > * {
+    border-width: 1px 0;
+}
+
+.table thead {
+    background-color: #25476a !important;
+    border-color: black !important;
+}
+
+.table thead th {
+    color: white !important;
+}
+
+/** SPINNER CREATION **/
+
+.loader {
+    position: relative;
+    text-align: center;
+    margin: 15px auto 35px auto;
+    z-index: 9999;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

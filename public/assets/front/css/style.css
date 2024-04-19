@@ -1,0 +1,79 @@
+@media (max-width: 1400px) {
+    .container {
+        width: 1170px!important;
+    }
+
+    .header-style-four #site-header-menu #site-navigation div.nav-menu>ul>li>a,
+    .header-style-four .cmt-mmmenu-override-yes #site-header-menu #site-navigation div.mega-menu-wrap ul.mega-menu.mega-menu-horizontal>li.mega-menu-item>a {
+        font-size: 15px;
+        margin: 0px 10px 0px 10px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .container {
+        width: 1280px!important;
+    }
+}
+
+.entry-content {
+    margin-bottom: 50px;
+}
+
+.cmt-vc_btn3.cmt-vc_btn3-size-md {
+    padding: 10px 30px 10px 30px;
+}
+
+.btn-rounded-sm {
+    border-radius: 10px;
+}
+
+input.form-control, select.form-control {
+    height: 45px!important;
+}
+
+.form-control {
+    border: 1px solid rgba(252, 106, 32, 1)!important;
+    padding: 10px 12px;
+}
+
+.form-control-file {
+    font-size: 14px;
+}
+
+.border-dark {
+    border: 2px solid black!important;
+}
+
+.text-lg-right {
+    text-align: right;
+}
+
+.btn-main-outline {
+    border: 2px solid #002c5b!important;
+    color: #002c5b!important;
+}
+
+.btn-main-outline:hover {
+    color: #fff!important;
+    background-color: #fc6a20!important;
+    border: none!important;
+}
+
+.btn-square {
+    height: 30px;
+    width: 30px;
+}
+
+.border {
+    border: 1px solid #eee;
+}
+
+.custom-hide {
+    height: 0;
+    overflow: hidden;
+}
+
+.roboto-mono {
+    font-family: 'Roboto Mono';
+}

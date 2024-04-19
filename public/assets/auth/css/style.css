@@ -1,0 +1,326 @@
+.loading_tg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #fff;
+
+}
+
+.msg {
+    color: #6c6c6c;
+    font: 20px/20px Arial, sans-serif;
+    letter-spacing: .2px;
+    text-align: center
+}
+
+
+.invfr {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border: 0
+}
+
+.msgb {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    padding: 20px
+}
+
+#logo {
+    animation: a-s .5s 1.5s 1 forwards;
+    height: 4px;
+    margin: 56px auto 20px;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    width: 300px
+}
+
+
+#loadingProgressG {
+    animation: a-s .5s 1.5s 1 forwards;
+    height: 4px;
+    margin: 56px auto 20px;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    width: 300px
+}
+
+#loadingProgressG::before {
+    animation: a-lb 20s 3s linear forwards;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-300px);
+    width: 100%
+}
+
+
+
+#loadingProgressG {
+    width: 352px;
+    height: 5px;
+    overflow: hidden;
+    background-color: #25476a;
+    margin: auto;
+    border-radius: 14px;
+    -o-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+}
+
+.loadingProgressG {
+    background-color: rgb(235, 235, 235);
+    margin-top: 0;
+    margin-left: -352px;
+    animation-name: bounce_loadingProgressG;
+    -o-animation-name: bounce_loadingProgressG;
+    -ms-animation-name: bounce_loadingProgressG;
+    -webkit-animation-name: bounce_loadingProgressG;
+    -moz-animation-name: bounce_loadingProgressG;
+    animation-duration: 2.08s;
+    -o-animation-duration: 2.08s;
+    -ms-animation-duration: 2.08s;
+    -webkit-animation-duration: 2.08s;
+    -moz-animation-duration: 2.08s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    width: 352px;
+    height: 28px;
+}
+
+@keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -352px;
+    }
+
+    100% {
+        margin-left: 352px;
+    }
+}
+
+@-o-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -352px;
+    }
+
+    100% {
+        margin-left: 352px;
+    }
+}
+
+@-ms-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -352px;
+    }
+
+    100% {
+        margin-left: 352px;
+    }
+}
+
+@-webkit-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -352px;
+    }
+
+    100% {
+        margin-left: 352px;
+    }
+}
+
+@-moz-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -352px;
+    }
+
+    100% {
+        margin-left: 352px;
+    }
+}
+
+
+
+@keyframes a-s {
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes a-h {
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes a-nt {
+    100% {
+        transform: none
+    }
+}
+
+@keyframes a-e {
+    43% {
+        animation-timing-function: cubic-bezier(.8, 0, .2, 1);
+        transform: scale(.75)
+    }
+
+    60% {
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+        transform: translateY(-16px)
+    }
+
+    77% {
+        animation-timing-function: cubic-bezier(.16, 0, .2, 1);
+        transform: none
+    }
+
+    89% {
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+        transform: translateY(-5px)
+    }
+
+    100% {
+        transform: none
+    }
+}
+
+@keyframes a-ef {
+    24% {
+        animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+        transform: scaleY(.42)
+    }
+
+    52% {
+        animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+        transform: scaleY(.98)
+    }
+
+    83% {
+        animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+        transform: scaleY(.96)
+    }
+
+    100% {
+        transform: none
+    }
+}
+
+@keyframes a-efs {
+    24% {
+        animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+        opacity: .3
+    }
+
+    52% {
+        animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+        opacity: .03
+    }
+
+    83% {
+        animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+        opacity: .05
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes a-es {
+    24% {
+        animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+        transform: rotate(-25deg)
+    }
+
+    52% {
+        animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+        transform: rotate(-42.5deg)
+    }
+
+    83% {
+        animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+        transform: rotate(-42deg)
+    }
+
+    100% {
+        transform: rotate(-43deg)
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-media {
+        padding: 10px 20px 10px 20px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-left-banner {
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .title-banner {
+        font-size: 2rem !important;
+    }
+
+    .desc-banner {
+        font-size: 1rem !important;
+    }
+
+    .img-logo {
+        width: 100px !important;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .responsive-media-body {
+        padding: 100px 30px 100px 30px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .section-content-utama {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .section-content-kedua {
+        padding: 10px 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-left {
+        display: none;
+    }
+
+    .main-content {
+        background: url('/assets/front/wp-content/uploads/2020/07/cropped-logomnk-192x192.png') no-repeat bottom right / 75% auto
+    }
+}
